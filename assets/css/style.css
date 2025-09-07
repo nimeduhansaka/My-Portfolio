@@ -378,7 +378,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero {
   background-color: var(--cultured);
-  padding-block-start: calc(var(--section-padding) + 30px);
+  padding-block-start: calc(var(--section-padding) + 10px);
 }
 
 .hero-banner {
@@ -1053,4 +1053,30 @@ textarea.input-field {
 
   .hero-banner { width: 275px; }
 
+}
+
+
+
+/* Card Shuffle Animation */
+@keyframes card-shuffle {
+  0% {
+    transform: scale(0.95) rotate(-5deg);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.05) rotate(5deg);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.98) rotate(-2deg);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.shuffle-animate {
+  animation: card-shuffle 0.8s cubic-bezier(.6,-0.28,.74,.05) both;
 }

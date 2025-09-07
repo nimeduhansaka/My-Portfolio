@@ -55,3 +55,12 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
   }
 });
+
+
+//For get current year
+document.addEventListener("DOMContentLoaded", function() {
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
